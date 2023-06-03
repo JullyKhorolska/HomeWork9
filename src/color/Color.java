@@ -3,49 +3,36 @@ package color;
 import java.util.Arrays;
 
 public enum Color {
-    RED {
+    RED ("#ff0000 (255,0,0)") {
         @Override
         public String toString() {
             return ("This color is red");
         }
     },
-    GREEN {
+    GREEN ("#00ff00 (0,255,0)") {
         @Override
         public String toString() {
             return ("This color is green");
         }
     },
-    YELLOW {
+    YELLOW ("#ffff00 (255,255,0)")  {
         @Override
         public String toString() {
-            return ("This color is  yellow");
+            return ("This color is yellow");
         }
     },
-    BROWN {
+    BROWN ("#964B00 (165,42,42)") {
         @Override
         public String toString() {
             return ("This color is brown");
         }
     };
-    public String[] hexAndRgb(Color color) {
-
-            switch (color) {
-                case RED:
-                    System.out.println(Arrays.toString(new String[]{"#ff0000", "(255, 0, 0)"}));
-                    return new String[]{"#ff0000", "(255, 0, 0)"};
-
-                case GREEN:
-                    System.out.println(Arrays.toString(new String[]{"#00ff00", "(0, 255, 0)"}));
-                    return new String[]{"#00ff00", "0, 255, 0)"};
-
-                case YELLOW:
-                    System.out.println(Arrays.toString(new String[]{"#ffff00", "(255, 255, 0)"}));
-                    return new String[]{"#ffff00", "(255, 255, 0)"};
-                case BROWN:
-                    System.out.println(Arrays.toString(new String[]{"#964B00", "(165,42,42)"}));
-                    return new String[]{"#964B00", "(165,42,42)"};
-            }
-        return new String[]{"END"};
+    private String color;
+    Color (String color) {
+        this.color = color;
+    }
+    public String getColor() {
+        return color;
     }
 }
 

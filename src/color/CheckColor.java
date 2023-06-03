@@ -9,7 +9,7 @@ public class CheckColor {
     public static void main(String[] args) {
         for(Color colors : Color.values()){
             System.out.println(colors.name());
-            colors.hexAndRgb(colors);
+            System.out.println(colors.getColor());
             System.out.println(colors);
             System.out.println("-------------------\n");
 
